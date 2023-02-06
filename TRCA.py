@@ -21,14 +21,8 @@ import scipy.linalg as linalg
 import scipy.signal as scp
 
 from sklearn.base import BaseEstimator, ClassifierMixin
-from sklearn.decomposition import PCA
 from pyriemann.estimation import Covariances
-from sklearn.utils.validation import check_X_y, check_array, check_is_fitted
-
-from super_cool_bci_tools.classification.utils_clf import (
-    filterbank,
-    schaefer_strimmer_cov,
-)
+from sklearn.utils.validation import  check_is_fitted
 
 def filterbank(data, sfreq, idx_fb, peaks):
     """
